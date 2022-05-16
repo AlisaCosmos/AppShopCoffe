@@ -12,6 +12,7 @@
 Все остальное на ваше усмотрение.
 
 ### Ссылка на развернутый проект на github pages
+https://alisacosmos.github.io/AppShopCoffe/
 
 ### Скриншот приложения
 ![screenshot_Coffe_shop](https://i.imgur.com/rpiyUXU.jpg)
