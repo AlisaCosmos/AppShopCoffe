@@ -105,7 +105,7 @@ const App = () => {
                     </Search>
 
                 <ErrorBoundary
-                    FallbackComponent={ErrorFallback}>
+                    fallback={<div> Что-то пошло не так </div>}>
                 <ListCard 
                     //Сотояние карточек с товарами обновляется в зависимости от поведения пользователя
                     goods={products} 
