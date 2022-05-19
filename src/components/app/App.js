@@ -35,7 +35,7 @@ const App = () => {
 
 
     //как только данные загрузятся, произойдет событие .then или .catch
-    //в этот момент ты можешь сделать setLoading(false)
+    //в этот момент делаем setLoading(false)
     fetch('../../data/data.json')
     .then(response => response)
     .then(json1 => {
