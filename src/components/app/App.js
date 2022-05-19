@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 import { Container } from '@mui/material';
-import { ErrorBoundary } from 'react-error-boundary';
+import { WithErrorBoundary } from 'react-error-boundary';
 
 
 
@@ -13,11 +13,11 @@ import Backed from '../backet/Backed.js';
 import Snack from '../snack/Snack.js';
 import ErrorFallback from '../errorFallback/ErrorFallback.js';
 
-import {goods} from '../../data/data.js';
-
+import json from '../../data/data.json';
 
 
 const App = () => {
+    let goods = json;
     //Изменяем состояние заказа
     const [order, setOrder] = useState([]);
     console.log(`setOrder ${setOrder}, order ${order} `);
@@ -28,7 +28,26 @@ const App = () => {
     //Изменяет состояние открытия корзины на странице
     const [isCardOpen, SetCardOpen] = useState(false);
     // Изменяет состояние оповещения пользователя что товар в корзине
-    const [isShackOpen, setSnackOpen] = useState(false)
+    const [isShackOpen, setSnackOpen] = useState(false);
+
+    const [ isLoading, setLoading] = useState(true);
+    const [ error, setError] = useState(false);
+
+
+    //как только данные загрузятся, произойдет событие .then или .catch
+    //в этот момент ты можешь сделать setLoading(false)
+    fetch('../../data/data.json')
+    .then(response => response)
+    .then(json1 => {
+        console.log(json1);
+        setLoading(false);
+    })
+
+
+    const GetPost = () => {
+        setLoading(false)
+
+    };
 
     //Функция поиска по названию товара
     const handleChange = (e) => {
@@ -102,23 +121,20 @@ const App = () => {
                     value={search}
                     //В случае состояния события onChange будет обновляться каждое изменение символа
                     onChange={handleChange}>
-                    </Search>
-
-                <ErrorBoundary
-                    fallback={<div> Что-то пошло не так </div>}>
+                </Search>   
                 <ListCard 
                     //Сотояние карточек с товарами обновляется в зависимости от поведения пользователя
                     goods={products} 
-                    setOrder={addToOrder}>
+                    setOrder={addToOrder}
+                    isLoading={isLoading}>
                 </ListCard>
-                </ErrorBoundary>
+                
             </Container>
             <Backed 
                 //Состояние открытие или закрытие корзины
                 cardOpen={isCardOpen} 
                 // Функция на закрытие карзины меняет состояние false
                 cardClose={()=> SetCardOpen(false)}
-
                 removeFromOrder={removeFromOrder}
                 order={order}>
             </Backed>

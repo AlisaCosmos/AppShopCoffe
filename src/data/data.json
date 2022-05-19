@@ -1,4 +1,4 @@
-export const goods = [
+[
     {"id":9539,"uid":"0e29bc46-5307-4261-9cfc-db92369432ec","blend_name":"Seattle Star","origin":"Colima, Mexico","variety":"Tafari-Kela","notes":"bright, velvety, nectarine, sweet pea, kiwi","intensifier":"juicy"},
     {"id":341,"uid":"30d8cb1a-2a05-4ae9-a770-4e8ee1dd5482","blend_name":"Jacked Level","origin":"Mogiana, Brazil","variety":"Sumatara","notes":"juicy, syrupy, lavender, walnut, nectarine","intensifier":"crisp"},
     {"id":3617,"uid":"0e94e968-460d-4207-b2d9-a02633718427","blend_name":"Joe Extract","origin":"Mogiana, Brazil","variety":"Tafari-Kela","notes":"structured, slick, cherry, prune, lavender","intensifier":"pointed"},
@@ -19,4 +19,4 @@ export const goods = [
     {"id":9984,"uid":"fc120c56-9d7f-4ea9-a355-f4bc5916a71b","blend_name":"Split Mug","origin":"Tecapa-Chinameca, El Salvador","variety":"S.4","notes":"wild, full, grapefruit, black currant, fresh bread","intensifier":"dull"},
     {"id":6198,"uid":"ab36d6ed-be80-4c74-9f1a-53f351ea14fe","blend_name":"Veranda Cake","origin":"Comayagua, Honduras","variety":"Gimma","notes":"muted, juicy, ginger, barley, pineapple","intensifier":"clean"},
     {"id":5997,"uid":"b013ff51-9d1f-4728-a194-6442d396f996","blend_name":"Strong Solstice","origin":"Sheveroys, India","variety":"Mundo Novo","notes":"structured, velvety, raspberry, raisin, soil","intensifier":"structured"}
-];
+]

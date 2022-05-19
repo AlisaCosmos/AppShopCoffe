@@ -23,7 +23,7 @@ const Backed = (props) => {
             // Функция отрабатывает по закрытию корзины при клике вне области Drawer
             onClose ={cardClose}>
 
-                <List sx={{width: 400}}>
+                <List sx={{width: 300}}>
                     <ListItem>
                         <ListItemIcon>
                             <ShoppingBasket/>
